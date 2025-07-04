@@ -26,6 +26,7 @@ source /opt/ros/humble/setup.bash
 cd Workspace
 apt update
 rosdep install -i --from-path src --rosdistro humble -y
+source /opt/ros/humble/setup.bash
 colcon build
 ```
 
