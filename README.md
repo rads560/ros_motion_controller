@@ -11,7 +11,7 @@ simulate the turtle bot using the teleport mode instead and see the turtle jump 
 ## Prerequisites
 - make sure docker is installed! see https://docs.docker.com/get-started/get-docker/
 - alternatively, ROS 2 Humble is installed
-- install and set up an x server such as XQuartz
+- install and set up an X server such as XQuartz
 
 ## To Run
 Clone this repo and cd into it.
@@ -28,16 +28,9 @@ apt update
 rosdep install -i --from-path src --rosdistro humble -y
 source /opt/ros/humble/setup.bash
 colcon build
-```
-
-Make a new terminal and get back into the same docker container using `docker ps` and `docker exec -it <tag> /bin/bash`
-Then run:
-```
-source /opt/ros/humble/setup.bash
-cd Workspace
 source install/local_setup.bash
-_insert launch command here_
 ```
+After this, you will need to use one of the launch commands specified below.
 
 ## Launch commands
 ```
@@ -64,6 +57,7 @@ I didn't have time for everything I wanted to do, so here are some things I'd li
 - use actions to abort GUI commands rather than an empty message
 - tune the motion controller
 - add unit tests
+- and more!
 
 ## Hope you enjoy! 
 Feel free to contact Radhika Agrawal for any questions/concerns. :) 
