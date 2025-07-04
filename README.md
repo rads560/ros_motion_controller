@@ -17,7 +17,7 @@ simulate the turtle bot using the teleport mode instead and see the turtle jump 
 Clone this repo and cd into it.
 ```
 docker build -t my/ros:ros-motion-controller .
-docker run -it -v $(pwd)/src:/Workspace -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix --rm my/ros:ros-motion-controller
+docker run -it -v $(pwd):/Workspace -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix --rm my/ros:ros-motion-controller
 ```
 
 Once in the docker container, run:
