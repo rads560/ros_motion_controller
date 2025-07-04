@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <node pkg="clock_pose_issuer" exec="clock_node" name="clock_node" />
+  <node pkg="gui_pose_issuer" exec="gui_node" name="gui_node" />
+  <node pkg="pose_manager" exec="pose_manager_node" />
+  <node pkg="motion_controller" exec="motion_ctl_node" name="motion_ctl_node" >
+    <param name="use_teleport" value="true"/>
+  </node>
+  <node pkg="turtlesim" exec="turtlesim_node" name="sim" />
+</launch>
